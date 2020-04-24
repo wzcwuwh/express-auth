@@ -1,0 +1,27 @@
+@url=http://localhost:3001/api
+@json=Content-Type: application/json
+
+### get all users
+get {{url}}/users
+
+### create a new user
+post {{url}}/signup
+{{json}}
+
+{
+  "username": "user3",
+  "password": "123456"
+}
+
+### login
+post {{url}}/signin
+{{json}}
+
+{
+  "username": "user3",
+  "password": "123456"
+}
+
+### get user profile
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTJhOTI4YzRiZDQ4MjI0ZGNlODRjOSIsImlhdCI6MTU4NzczMjExMX0.PQ0au6XnAEky-3mD9GF-OZJZbkcCRSrCGBDvLwhPlVI
